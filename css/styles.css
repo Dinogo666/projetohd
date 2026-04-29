@@ -9,6 +9,11 @@
 :root {
     --color-light: #f4f4f4;
     --color-orange: #ff6600;
+    --color-dark:  #111111;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
 }
 
 html {
@@ -17,6 +22,7 @@ html {
 
 body {
     font-family: "Quicksand", sans-serif;
+    background-color: var(--color-dark);
 }
 
 /* Formatações para elementos que sempre se repetem  */
@@ -54,12 +60,12 @@ ul, ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 20px;
+    padding-inline: var(--spacing-md);
 }
 
 .hero-menu {
     display: flex;
-    gap: 20px;
+    gap: var(--spacing-md);
 }
 
 .cta{
@@ -68,7 +74,7 @@ display: flex;
 flex-direction: column;
 align-items:center;
 justify-content: center;
-gap: 30px;
+gap: var(--spacing-lg);
 }
 .cta h2{
     font-size: 10vmin;
@@ -81,14 +87,14 @@ gap: 30px;
     line-height: 1.6;
     text-wrap: balance;
 }
-.cta a{
+.btn{
     border: 2px solid var(--color-orange);
     background-color: var(--color-orange);
-    padding: 10px 30px;
+    padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: 80px;
     transition: .5s;
 }
-.cta a:hover{
+.btn:hover{
     background-color: transparent;
 
 }
@@ -109,4 +115,29 @@ gap: 30px;
 
 .motos, .conheca, .galeria {
     height: 100dvh;
+}
+
+.motos{
+    width: 90%;
+padding: var(--spacing-md);
+background-color: var(--color-dark);
+color: var(--color-light);
+margin: var(--spacing-sm) auto; 
+}
+.motos h2{
+    font-size: 8vmin;
+}
+.motos span{
+    color: var(--color-orange);
+}
+.grid-motos{
+        width: 100%;
+    display: grid;
+
+}
+.moto-item{
+width: 30%;
+}
+.moto-item img{
+width: 100%;
 }
